@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>Görögország</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="css.css">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	</head>
+<body style="background-image: url('pic/kep.jpg'); background-size: cover;" onload="startTime()">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="https://hu.wikipedia.org/wiki/G%C3%B6r%C3%B6gorsz%C3%A1g">Görögország</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Kezdőlap</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Helyek, ahol jártam <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="Sarti.html">Sarti</a></li>
+			<li><a href="kefalonia.html">Kefalónia</a></li>
+			<li><a href="neipori.html">Nei-pori</a></li>
+            <li><a href="corfu.html">Corfu</a></li>
+			<li><a href="blog.html">Blog</a></li>
+          </ul>
+	</ul>	  
+	<div id="ora" ></div>	
+  </div>
+ </div>
+		 <script>
+		function startTime() {
+		  var today = new Date();
+		  var h = today.getHours();
+		  var m = today.getMinutes();
+		  var s = today.getSeconds();
+		  m = checkTime(m);
+		  s = checkTime(s);
+		  document.getElementById('ora').innerHTML =
+		  h + ":" + m + ":" + s;
+		  var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+		  if (i < 10) {i = "0" + i};  
+		  return i;
+		}
+		</script>
+</nav>
+	<div class="loader-wrapper">
+	<span class="loader"><span class="loader-inner"></span></span>
+	</div>
+<div class="bg-text">
+  <div class="cimszoveg">Görögország</div>
+</div>
+	<div class="bg-sarti">
+	  <div class="cimszoveg">Sarti</div>
+	  <a href="Sarti.html"> <img src="pic/sarti.jpg" alt="Sarti" class="zoom"></a>
+	</div>
+	<div class="bg-neipori">
+	 <div class="cimszoveg">Nei-pori</div>
+	  <a href="neipori.html"> <img src="pic/nei.jpg" alt="Nei-pori" class="zoom" ></a>
+	</div>
+	<div class="bg-kefalonia">
+	<div class="cimszoveg">Kefalónia</div>
+	  <a href="kefalonia.html"> <img src="pic/skala.jpg" alt="Kefalónia" class="zoom"></a>
+	</div>
+	<div class="bg-corfu">
+	<div class="cimszoveg">Corfu</div>
+		<a href="corfu.html"><img src="pic/sidari.jpg" alt="Corfu" class="zoom"></a>
+	</div>
+		<script>
+				$(window).on("load",function(){
+				  $(".loader-wrapper").fadeOut("9000");
+				});
+		</script>
+</body>
+</html>

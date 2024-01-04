@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="hu">
+	<head>
+	  <title>Görögország</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="css.css">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	</head>
+<body style="background-image: url('pic/corfuhatter.jpg')" onload="startTime()">
+<nav class="navbar navbar-inverse" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="https://hu.wikipedia.org/wiki/G%C3%B6r%C3%B6gorsz%C3%A1g">Görögország</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Kezdőlap</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Helyek, ahol jártam <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="Sarti.html">Sarti</a></li>
+			<li><a href="kefalonia.html">Kefalónia</a></li>
+			<li><a href="neipori.html">Nei-pori</a></li>
+            <li><a href="corfu.html">Corfu</a></li>
+			<li><a href="blog.html">Blog</a></li>
+          </ul>
+	</ul>
+	<div id="ora" ></div>	
+  </div>
+ </div>
+		 <script>
+		function startTime() {
+		  var today = new Date();
+		  var h = today.getHours();
+		  var m = today.getMinutes();
+		  var s = today.getSeconds();
+		  m = checkTime(m);
+		  s = checkTime(s);
+		  document.getElementById('ora').innerHTML =
+		  h + ":" + m + ":" + s;
+		  var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+		  if (i < 10) {i = "0" + i};  
+		  return i;
+		}
+		</script>
+</nav>
+	<div class="loader-wrapper">
+	<span class="loader"><span class="loader-inner"></span></span>
+	</div>
+<div class="bg-text2" >
+<p>Korfu (görögül: Κέρκυρα, Kérkira [ˈcercira]; ógörögül: Κέρκυρα vagy Κόρκυρα; latinul: Corcyra; olaszul: Corfù) sziget Görögországban, a Jón-tengerben. A Jón-szigetek egyik tagja, a csoport szigetei közül a második legnagyobb területű. Kisebb, hozzá tartozó szigeteivel együttesen gyakorlatilag Korfu képezi az ország északnyugati határának szélét. A szigetet egyetlen önkormányzatként kezelik, és Korfu közigazgatási terület fennhatósága alá tartozik. Az önkormányzat közigazgatási szempontból tartalmazza a főszigetet, Korfut, valamint három kisebb tartozékát, Eríkusza, Mathráki és Othoní szigeteket.</p>
+<p>A sziget legnagyobb települését és az önkormányzat székhelyét is Korfunak hívják, lakossága 34 000 fő (2010-ben). A sziget ad otthont a Jón Egyetemnek.</p>
+<p>Korfu meszelt házakkal, bizánci templomokkal, valamint velencei erődök és görög templomok romjaival várja az ide érkezőket. Bóklásszon a római kori falu, Kassziopi ókori utcáin, vagy fedezze fel a névadó Korfu város központi eszplanádját. Ha egy kis „csináld magad” gyógyfürdőélményre vágyik, tegyen magára ásványi iszappakolást a Canal D’Amour partján. A legenda szerint Nymphes vízesései vonzották a nimfa elnevezésű mitológiai szépségeket, akik a faluba gyűltek, hogy megmártózzanak a kristálytiszta vízben.</p>
+</div>
+	<div class="bg-sarti2">
+	  <div class="cimszoveg">Porto Timoni</div>
+	  <img src="pic/porto.jpg" alt="Porto Timoni" class="zoom">
+	</div>
+	<div class="bg-sarti3">
+	  <div class="cimszoveg">Paleokastritsa</div>
+	  <img src="pic/pale.jpg" alt="Paleokastritsa" class="zoom">
+	</div>
+	<div class="bg-sarti4">
+	  <div class="cimszoveg">Sidari tengerpartja</div>
+	  <img src="pic/sidar.jpg" alt="Sidari" class="zoom">
+	</div>
+		<script>
+			$(window).on("load",function(){
+			  $(".loader-wrapper").fadeOut("9000");
+			});
+		</script>
+</body>
+</html>

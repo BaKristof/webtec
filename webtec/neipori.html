@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="hu">
+	<head>
+	  <title>Görögország</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="css.css">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	</head>
+<body style="background-image: url('pic/neihatter.jpg')" onload="startTime()">
+
+<nav class="navbar navbar-inverse" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="https://hu.wikipedia.org/wiki/G%C3%B6r%C3%B6gorsz%C3%A1g">Görögország</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Kezdőlap</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Helyek ahol jártam <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="Sarti.html">Sarti</a></li>
+			<li><a href="kefalonia.html">Kefalónia</a></li>
+			<li><a href="neipori.html">Nei-pori</a></li>
+            <li><a href="corfu.html">Corfu</a></li>
+			<li><a href="blog.html">Blog</a></li>
+          </ul>
+	</ul>
+	<div id="ora" ></div>	
+  </div>
+ </div>
+		 <script>
+		function startTime() {
+		  var today = new Date();
+		  var h = today.getHours();
+		  var m = today.getMinutes();
+		  var s = today.getSeconds();
+		  m = checkTime(m);
+		  s = checkTime(s);
+		  document.getElementById('ora').innerHTML =
+		  h + ":" + m + ":" + s;
+		  var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+		  if (i < 10) {i = "0" + i};  
+		  return i;
+		}
+		</script>
+</nav>
+	<div class="loader-wrapper">
+	<span class="loader"><span class="loader-inner"></span></span>
+	</div>
+<div class="bg-text2">
+
+	<p>Nei Pori egy hagyományos üdülőfalu az Oliposi rivérán közel a Tempi-völgyhöz, az Olipos lábánál. Lakossága körülbelül 100 fő. A falu folyamatosan fejlődik terjeszkedik, leginkább apartmanokkal.
+	Állítólag minden helyi lakos, ha házasodik ingyen telket kap, hogy a lakosság növekedjen. Az utcái szélesek, s Nei Pori leginkább a turisták kényelmére van berendezkedve.
+	Mindenfelé apartman, 1-2 hotel található. Két főutca szeli át melyekből több kis utca nyílik. Percek alatt el lehet jutni egyik feléből a másikba. Üzletek a belső utcákban, de leginkább az Olimpiu-n találhatóak szupermarketek, szuvenír, szőrme, pékség.
+	A külső utcákban is természetesen itt-ott találhatóak üzletek. Nei Pori part közeli főutcája az Olimpiu. Itt található gyógyszertár és a Dokik is. Amire figyelni kell, hogy ezek magán orvosok, akik csak a balesetbiztosítást fogadják el.</p>
+	<p>Nei Pori -tól egész Platamonasig elér a parti sétány. S mellette a gyönyörű homokos és széles part található. A víz lassan mélyül, viszont Platamonas felé közeledve a parti víz kezd kavicsosodni.
+	Nei Pori tengerpartján, több helyen napozóágyak nádtetős napernyők vannak. Ezek viszont a különböző bárokhoz, tavernákhoz tartoznak, amiket rendelés esettén lehet csak birtokba venni. Vagy bérelni, ami akár 4-5 Euró.
+	Viszont az üzletekben a napernyők átlagosan 4 Euróba kerülnek. Amire nagyon kell ügyelni, hogy árnyék nincs a parton. A parton a sétány mentén, több helyen zuhanyzó is található. Vízisíelési lehetőség van.</p>
+
+</div>
+	<div class="bg-sarti2">
+	  <div class="cimszoveg">Nei-pori éttermei</div>
+	  <img src="pic/nei1.jpg" alt="Sarti-narancspart" class="zoom">
+	</div>
+	<div class="bg-sarti3">
+	  <div class="cimszoveg">Nei-pori és az Olümposz</div>
+	  <img src="pic/nei2.jpg" alt="Sarti és az Athos" class="zoom" >
+	</div>
+	<div class="bg-sarti4">
+	  <div class="cimszoveg">Nei-pori tengerpartja</div>
+	  <img src="pic/nei3.jpg" alt="Sarti tengerpartja" class="zoom" >
+	</div>
+		<script>
+				$(window).on("load",function(){
+				  $(".loader-wrapper").fadeOut("9000");
+				});
+		</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="hu">
+	<head>
+	  <title>Görögország</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="css.css">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	</head>
+<body style="background-image: url('pic/kefaloniahatter.jpg')" onload="startTime()" >
+<nav class="navbar navbar-inverse" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="https://hu.wikipedia.org/wiki/G%C3%B6r%C3%B6gorsz%C3%A1g">Görögország</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Kezdőlap</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Helyek ahol jártam <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="Sarti.html">Sarti</a></li>
+			<li><a href="kefalonia.html">Kefalónia</a></li>
+			<li><a href="neipori.html">Nei-pori</a></li>
+            <li><a href="corfu.html">Corfu</a></li>
+			<li><a href="blog.html">Blog</a></li>
+          </ul>
+	</ul>
+	<div id="ora" ></div>	
+  </div>
+ </div>
+		<script>
+		function startTime() {
+		  var today = new Date();
+		  var h = today.getHours();
+		  var m = today.getMinutes();
+		  var s = today.getSeconds();
+		  m = checkTime(m);
+		  s = checkTime(s);
+		  document.getElementById('ora').innerHTML =
+		  h + ":" + m + ":" + s;
+		  var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+		  if (i < 10) {i = "0" + i};  
+		  return i;
+		}
+		</script>	
+</nav>
+	<div class="loader-wrapper">
+	<span class="loader"><span class="loader-inner"></span></span>
+	</div>
+<div class="bg-text2" >
+<p>Ha olyan nyaralást tervezel, ahol hangos szórakozóhelyeken és bulinegyedekben lehet kiereszteni a gőzt, ne Kefalóniát válaszd! De ha csendre, nyugalomra van szükséged, netán a türkizkék tengervíz és az érintetlen természet a gyengéd, itt a legjobb helyen jársz!</p>
+<p>Kefalónia Közép-Görögország nyugati partjainál, a Jón-tengerben fekszik. A 780 km² területű szigetet eddig elkerülte a tömegturizmus, köszönhetően annak a tudatos stratégiának, amivel a helyiek próbálják szabályozni és visszaszorítani a nagyméretű hotelberuházásokat és építkezéseket.</p>
+<p>Kefalónia ismertté válásában nagy szerepe volt a Corelli kapitány mandolinja című filmnek, amelyet Nicolas Cage főszereplésével forgattak a szigeten.</p>
+<p>Kefalónia a nyugalom szigeteként ismert, ahová tényleg csak azok utaznak, akik a különleges természeti adottságokat, a zöldellő hegyek látványát és a kristálytiszta vízű öblöket tudják értékelni. A sziget lakosainak vendégszeretete messze földön híres, a helyiek ma is főként mezőgazdaságból, halászatból és persze turizmusból élnek, de a borászat és olívatermesztés is jelentős.</p>
+</div>
+	<div class="bg-sarti2">
+	  <div class="cimszoveg">Antisamos strand</div>
+	  <img src="pic/anti.jpg" alt="Antisamos strand" class="zoom">
+	</div>
+	<div class="bg-sarti3">
+	  <div class="cimszoveg">Fiscardo kikötője</div>
+	  <img src="pic/fis.jpg" alt="Fiscardo kikötője" class="zoom">
+	</div>
+	<div class="bg-sarti4">
+	  <div class="cimszoveg">Assos</div>
+	  <img src="pic/assos.jpg" alt="Assos" class="zoom">
+	</div>
+		<script>
+				$(window).on("load",function(){
+				  $(".loader-wrapper").fadeOut("9000");
+				});
+		</script>
+</body>
+</html>

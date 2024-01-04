@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hu">
+	<head>
+	  <title>Görögország</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="css.css">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	</head>
+<body style="background-image: url('pic/sartihatter.jpg')" onload="startTime()"> 
+<nav class="navbar navbar-inverse" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="https://hu.wikipedia.org/wiki/G%C3%B6r%C3%B6gorsz%C3%A1g">Görögország</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Kezdőlap</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Helyek ahol jártam <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="Sarti.html">Sarti</a></li>
+			<li><a href="kefalonia.html">Kefalónia</a></li>
+			<li><a href="neipori.html">Nei-pori</a></li>
+            <li><a href="corfu.html">Corfu</a></li>
+			<li><a href="blog.html">Blog</a></li>
+          </ul>
+	</ul>
+	<div id="ora" ></div>	
+  </div>
+ </div>
+		 <script>
+		function startTime() {
+		  var today = new Date();
+		  var h = today.getHours();
+		  var m = today.getMinutes();
+		  var s = today.getSeconds();
+		  m = checkTime(m);
+		  s = checkTime(s);
+		  document.getElementById('ora').innerHTML =
+		  h + ":" + m + ":" + s;
+		  var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+		  if (i < 10) {i = "0" + i};  
+		  return i;
+		}
+		</script>
+</nav>
+<div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+</div>
+<div class="bg-text2" >
+<p>Sarti (Szárti) Budapesttől 1158 km-re, Thesszaloníkitől 144 km-re délkeletre fekvő nyaralóhely. Közép-Makedónia régióban, a Szithonia-félszigeten helyezkedik el. Lakosainak száma 1100 fő, de egy nyári napon ez akár 20 ezerre is felkúszik. Kis, gyalog is bejárható, csendes, nyugodt, barátságos falu (bár már rég nem igaz rá, hogy csendes halászfalu lenne), ahol azonban minden, a turisták számára szükséges szolgáltatás megtalálható. Maga a település, annak építészete nem különösebben látványos, és több nyaralóhelyhez képest nem túl sok program- és kirándulási lehetőséget kínál a falu, egyetlen nevezetessége temploma. Ugyanakkor, más görög-, valamint a horvát, spanyol, stb. tengerparti nyaralóhelyeknél olcsóbb is. A faluval szemben emelkedő, 2000 méter magas Athos-csúcs, azaz a Szent Hegy, és a kifejezetten látványos Sartiban, és környékén található strandok igazán széppé teszi a nyaralás kulisszáit, és sokan kedvelni fogják Sarti barátságos atmoszféráját is.</p>
+<p>Sarti népszerűsége rendkívül tiszta vízének, és hosszú, kék zászlós, lassan mélyülő (főleg a déli részen), homokos partjának is köszönhető. Gyorsabban mélyülő, hullámos, sziklás és kavicsos a strand is van a faluban. Sarti a magyar utazók körében kifejezetten kedvelt utazási célpont, szinte a "magyar falunak" mondható. Sokan többször, néhányan több mint háromszor is visszalátogatnak. A magyarok körében Sarti rendkívüli felkapottságának az is az oka, hogy sokan szeretik, ha beszélnek magyarul ott ahol nyaralnak, Sartiban pedig szinte minden étteremben, üzletben vannak magyar alkalmazottak, vagy a helyiek tudnak néhány szót. Az emberek ráadásul rendkívül kedvesek, valamint az árak is viszonylag megfelelőek erre, ár/érték arányban igen jó nyaralási célpontnak mondható. Van, aki szereti honfitársai közelségét, de van, aki kifejezetten ódzkodik attól, hogy nyaralása alatt szinte csak magyar szót halljon, és magyarok között legyen, tehát ők semmiképp se Sartit válasszák.</p>
+</div>
+	<div class="bg-sarti2">
+	    <div class="cimszoveg">Narancspart</div>
+	  <img src="pic/narancs.jpg" alt="Sarti-narancspart" class="zoom">
+	</div>
+	<div class="bg-sarti3">
+	<div class="cimszoveg">Sarti és az Athos</div>
+	  <img src="pic/sarti2.jpg" alt="Sarti és az Athos" class="zoom">
+	</div>
+	<div class="bg-sarti4">
+	<div class="cimszoveg">Sarti tengerpartja</div>
+	  <img src="pic/viz.jpg" alt="Sarti tengerpartja" class="zoom">
+	</div>
+		<script>
+				$(window).on("load",function(){
+				  $(".loader-wrapper").fadeOut("9000");
+				});
+		</script>
+</body>
+</html>
